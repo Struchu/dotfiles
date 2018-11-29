@@ -1,0 +1,19 @@
+[sncli]
+cfg_sn_username = struchu@gmail.com
+cfg_sn_password_eval = pass simplenote.com/struchu@gmail.com
+cfg_editor = vim {fname} +set\ tw=72 +{line}
+
+clr_note_title_day_fg = light red
+clr_note_title_week_fg = dark green
+clr_note_title_month_fg = dark blue
+clr_note_title_ancient_fg = default
+clr_user_input_bar_bg = brown
+clr_note_focus_bg = brown
+clr_note_content_focus_bg = brown
+clr_note_tags_fg = light gray
+clr_note_flags_fg = light blue
+clr_note_content_old_fg = light blue
+clr_note_content_old_bg = light gray
+clr_note_content_old_focus_bg = brown
+clr_help_focus_bg = brown
+clr_note_date_fg = light blue

@@ -1,0 +1,32 @@
+# Holiday data provided by holidata.net
+#   Generated 2018-11-27T17:54:43
+
+define holidays:
+  pl-PL:
+    2018_01_01 = Nowy Rok
+    2018_01_06 = Trzech Króli
+    2018_04_01 = Wielkanoc
+    2018_04_02 = Poniedziałek Wielkanocny
+    2018_05_01 = Święto Pracy
+    2018_05_03 = Święto Konstytucji Trzeciego Maja
+    2018_05_20 = Zielone Świątki
+    2018_05_31 = Boże Ciało
+    2018_08_15 = Wniebowzięcie NMP
+    2018_11_01 = Wszystkich Świętych
+    2018_11_11 = Święto Niepodległości
+    2018_12_25 = Boże Narodzenie (pierwszy dzień)
+    2018_12_26 = Boże Narodzenie (drugi dzień)
+    2019_01_01 = Nowy Rok
+    2019_01_06 = Trzech Króli
+    2019_04_21 = Wielkanoc
+    2019_04_22 = Poniedziałek Wielkanocny
+    2019_05_01 = Święto Pracy
+    2019_05_03 = Święto Konstytucji Trzeciego Maja
+    2019_06_09 = Zielone Świątki
+    2019_06_20 = Boże Ciało
+    2019_08_15 = Wniebowzięcie NMP
+    2019_11_01 = Wszystkich Świętych
+    2019_11_11 = Święto Niepodległości
+    2019_12_25 = Boże Narodzenie (pierwszy dzień)
+    2019_12_26 = Boże Narodzenie (drugi dzień)
+

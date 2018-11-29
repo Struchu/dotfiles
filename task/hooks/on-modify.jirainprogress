@@ -1,0 +1,30 @@
+#!/bin/python
+
+from jira import JIRA
+
+import json
+import subprocess
+import sys
+
+USERNAME = 'marcin.strus@makimo.pl'
+PASSWORD = 'makimo.atlassian.net/marcin.strus@makimo.pl-token'
+SERVER = 'https://makimo.atlassian.net/'
+
+old = json.loads(sys.stdin.readline())
+new = json.loads(sys.stdin.readline())
+print(json.dumps(new))
+
+if 'start' in new and 'jiraid' in new:
+    password = subprocess.check_output(['pass', PASSWORD]).strip()
+    jira = JIRA(
+        {
+            'server': SERVER,
+            'rest_api_version': 'latest'
+        },
+        basic_auth=(USERNAME, password)
+    )
+    issue = jira.issue(new['jiraid'])
+    transitions = jira.transitions(issue)
+    in_progress = [t['id'] for t in transitions if t['name'] == 'In Progress']
+    if len(in_progress) > 0:
+        jira.transition_issue(issue, in_progress[0])

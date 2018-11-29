@@ -1,0 +1,10 @@
+[Added Associations]
+text/plain=vim.desktop;
+
+[Default Applications]
+text/html=qutebrowser.desktop
+application/pdf=zathura.desktop
+x-scheme-handler/http=qutebrowser.desktop
+x-scheme-handler/https=qutebrowser.desktop
+x-scheme-handler/about=qutebrowser.desktop
+x-scheme-handler/unknown=qutebrowser.desktop

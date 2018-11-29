@@ -1,0 +1,49 @@
+source ~/.mutt/themerc
+
+set envelope_from = yes
+set edit_headers = yes
+
+set editor = "vim +/^$"
+set charset = "utf-8"
+
+set sort = 'threads'
+set move = no
+set sort_aux = 'reverse-last-date-received'
+
+set mbox_type = Maildir
+set folder = ~/.mail
+set spoolfile = +"struchu/Odebrane"
+
+set sidebar_visible
+set mail_check_stats
+set sidebar_short_path
+set sidebar_delim_chars="/"
+set sidebar_folder_indent
+set sidebar_indent_string="  "
+set sidebar_width = 20
+set sidebar_format = '%B%?N? (%N)?%*'
+color sidebar_ordinary color12 default
+color sidebar_new cyan default
+color sidebar_flagged color12 default
+
+set confirmappend = no
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+source ~/.mutt/mailboxes
+
+folder-hook struchu "source ~/.mutt/struchu.gmailrc"
+folder-hook makimo "source ~/.mutt/marcin.strus.makimorc"
+
+source ~/.mutt/struchu.gmailrc
+
+macro attach S <save-entry><bol>~/Downloads/ "save attachment in downloads directory"
+
+macro pager,index \Cj <sidebar-next> "move cursor to next mailbox"
+macro pager,index \Ck <sidebar-prev> "move cursor to previous mailbox"
+macro pager,index \Cl <sidebar-next-new> "move cursor to next mailbox with new mail"
+macro pager,index \Ch <sidebar-prev-new> "move cursor to previous mailbox with new mail"
+macro pager,index \Co <sidebar-open> "open selected inbox"
+
+bind editor <Tab> complete-query

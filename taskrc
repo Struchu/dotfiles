@@ -1,0 +1,57 @@
+# Files
+data.location=~/.task
+
+# Color theme
+include ~/.arena/solarized-16.theme
+
+# Polish holidays
+include ~/.arena/holidays.rc
+calendar.holidays = full
+
+# Customize the list view
+report.st.description = Struchowy Flow
+report.st.columns = id,project,jiraid,description.count
+report.st.labels = ID,Projekt,JIRA,Opis
+report.st.filter = status:pending
+report.st.sort = start-,project+,jiraid+,entry+
+
+default.command = st
+
+# Taskserver
+include ~/.arena/credentials
+
+# UDAs for custom services
+uda.githubcreatedon.label=Github Created
+uda.githubupdatedat.type=date
+uda.githubupdatedat.label=Github Updated
+uda.githubmilestone.type=string
+uda.githubmilestone.label=Github Milestone
+uda.githubrepo.type=string
+uda.githubrepo.label=Github Repo Slug
+uda.githuburl.type=string
+uda.githuburl.label=Github URL
+uda.githubtype.type=string
+uda.githubtype.label=Github Type
+uda.githubnumber.type=numeric
+uda.githubnumber.label=Github Issue/PR #
+uda.githubuser.type=string
+uda.githubuser.label=Github User
+uda.githubnamespace.type=string
+uda.githubnamespace.label=Github Namespace
+uda.jirasummary.type=string
+uda.jirasummary.label=Jira Summary
+uda.jiraurl.type=string
+uda.jiraurl.label=Jira URL
+uda.jiradescription.type=string
+uda.jiradescription.label=Jira Description
+uda.jiraid.type=string
+uda.jiraid.label=Jira Issue ID
+uda.jiraestimate.type=numeric
+uda.jiraestimate.label=Estimate
+uda.jirafixversion.type=string
+uda.jirafixversion.label=Fix Version
+uda.jiracreatedts.type=date
+uda.jiracreatedts.label=Created At
+
+# Settings for task shell
+tasksh.autoclear = 1

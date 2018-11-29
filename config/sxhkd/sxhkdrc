@@ -1,0 +1,79 @@
+# terminal emulator
+super + Return
+    st -e tmux
+
+# program launcher and pass integration
+super + {space,z}
+    {dmenu_run -p run:,passmenu --type -p pass:} -fn 'Menlo for Powerline:size=10' -nb '#fdf6e3' -nf '#657b83' -sb '#eee8d5' -sf '#657b83'
+
+# screen lock
+super + shift + a
+    lock.sh
+
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# quit/restart bspwm
+super + shift + q
+    bspc quit
+
+# close and kill
+super + q
+    bspc node -c
+
+# alternate between the tiled and monocle layout
+super + t
+    bspc desktop -l next
+
+# swap the current node and the biggest node
+super + shift + Return
+    bspc node -s biggest.local
+
+#
+# focus/swap
+#
+
+# focus or send to the given desktop
+super + {_,shift + }{1,2,3,4,5,6,7,8,9,0}
+    worksel.sh {focus,swap} '{1,2,3,4,5,6,7,8,9,10}'
+
+# traverse the nodes
+super + {j,k}
+    bspc node -f {next,prev}.local
+
+# traverse the monitors
+super + {h,l}
+    bspc monitor -f {prev,next}
+
+# programs
+
+super + shift + p
+    st -n weechat -e tmux new-session -A -s chat weechat
+
+super + shift + o
+    st -n develop -e tmux new-session -A -s develop
+
+super + shift + d
+    st -n duck -e tmux new-session -A -s duck "ddgr --url-handler w3m"
+
+super + shift + n
+    st -n new -e newsboat
+
+XF86Audio{Prev,Next,Play}
+    mpc -q {prev,next,toggle}
+
+XF86Audio{Mute,RaiseVolume,LowerVolume}
+    amixer set Master {toggle,10%+,10-}
+
+XF86MonBrightness{Down,Up}
+    xbacklight -{dec,inc} 10
+
+XF86Tools
+    st -n player -e ncmpcpp
+
+XF86Mail
+    st -n mail -e neomutt
+
+super + shift + l ; {m,p}
+    st -n {mail -e neomutt,player -e ncmpcpp}

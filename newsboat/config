@@ -1,0 +1,19 @@
+refresh-on-startup yes
+auto-reload yes
+reload-time 30
+reload-threads 4
+
+prepopulate-query-feeds yes
+
+urls-source "ttrss"
+ttrss-url "https://news.strus.guru"
+ttrss-login "struchu"
+ttrss-passwordeval "pass news.strus.guru/struchu"
+ttrss-flag-star "a"
+ttrss-flag-publish "p"
+
+browser "qutebrowser %u >/dev/null 2>&1 &"
+external-url-viewer "urlview"
+
+include "~/.newsboat/colors"
+include "~/.newsboat/keybindings"

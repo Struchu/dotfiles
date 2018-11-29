@@ -1,0 +1,19 @@
+set from = "struchu@gmail.com"
+set realname = "Struchu"
+set header_cache = ~/.mutt/struchu/cache/headers
+set message_cachedir = ~/.mutt/struchu/cache/bodies
+set certificate_file = ~/.mutt/struchu/certificates
+set sendmail = "msmtp -a struchu"
+
+set postponed = "+struchu/Wersje robocze"
+set record = "+struchu/Wysłane"
+
+set query_command = "goobook -c ~/.mutt/struchu.goobookrc query %s"
+
+macro index D "<save-message>+struchu/Kosz<enter>" "move message to trash"
+macro index S "<save-message>+struchu/Spam<enter>" "move message to spam"
+macro index A "<save-message>+struchu/MuttArchive<enter>" "archive message"
+macro index J "<save-message>+struchu/JIRA<enter>" "move to JIRA folder"
+macro index I "<save-message>+struchu/Odebrane<enter>" "move to Inbox"
+
+macro index \Ca "<change-folder>+makimo/Odebrane<enter>" "go to work account"

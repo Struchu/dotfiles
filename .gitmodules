@@ -1,0 +1,45 @@
+[submodule "src/weechat/weechat-vimode"]
+	path = src/weechat/weechat-vimode
+	url = https://github.com/GermainZ/weechat-vimode.git
+[submodule "src/weechat/wee-slack"]
+	path = src/weechat/wee-slack
+	url = https://github.com/wee-slack/wee-slack.git
+[submodule "src/temper-python"]
+	path = src/temper-python
+	url = https://github.com/padelt/temper-python.git
+[submodule "src/tpm"]
+	path = src/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "src/htop"]
+	path = src/htop
+	url = https://github.com/hishamhm/htop.git
+[submodule "src/htop-vim-solarized-git"]
+	path = src/htop-vim-solarized-git
+	url = https://aur.archlinux.org/htop-vim-solarized-git.git
+[submodule "src/hhpc"]
+	path = src/hhpc
+	url = https://github.com/aktau/hhpc.git
+[submodule "src/prettyping"]
+	path = src/prettyping
+	url = https://github.com/denilsonsa/prettyping.git
+[submodule "src/slstatus"]
+	path = src/slstatus
+	url = git@github.com:Struchu/slstatus.git
+	branch = struchu
+[submodule "src/dwm"]
+	path = src/dwm
+	url = git@github.com:Struchu/dwm.git
+	branch = struchu
+[submodule "src/st"]
+	path = src/st
+	url = git@github.com:Struchu/st.git
+	branch = struchu
+[submodule "src/bitlbee"]
+	path = src/bitlbee
+	url = https://github.com/bitlbee/bitlbee.git
+[submodule "src/zplug"]
+	path = src/zplug
+	url = https://github.com/zplug/zplug
+[submodule "src/pfetch"]
+	path = src/pfetch
+	url = https://github.com/dylanaraps/pfetch.git

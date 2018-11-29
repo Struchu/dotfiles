@@ -1,0 +1,100 @@
+IMAPAccount struchu
+Host imap.gmail.com
+User struchu@gmail.com
+PassCmd "pass Gmail/struchu"
+SSLType IMAPS
+
+IMAPAccount makimo
+Host imap.gmail.com
+User marcin.strus@makimo.pl
+PassCmd "pass Gmail/makimo"
+SSLType IMAPS
+
+IMAPStore struchu-remote
+Account struchu
+
+IMAPStore makimo-remote
+Account makimo
+
+Expunge Both
+
+MaildirStore struchu-local
+Subfolders Verbatim
+Path ~/.mail/struchu/
+Inbox ~/.mail/struchu/Odebrane
+
+MaildirStore makimo-local
+Subfolders Verbatim
+Path ~/.mail/makimo/
+Inbox ~/.mail/makimo/Odebrane
+
+Channel struchu-inbox
+Master :struchu-remote:"INBOX"
+Slave :struchu-local:Odebrane
+
+Channel struchu-sent
+Master :struchu-remote:"[Gmail]/Wys&AUI-ane"
+Slave :struchu-local:Wysłane
+
+Channel struchu-trash
+Master :struchu-remote:"[Gmail]/Kosz"
+Slave :struchu-local:Kosz
+
+Channel struchu-spam
+Master :struchu-remote:"[Gmail]/Spam"
+Slave :struchu-local:Spam
+
+Channel struchu-drafts
+Master :struchu-remote:"[Gmail]/Wersje robocze"
+Slave :struchu-local:"Wersje robocze"
+
+Channel struchu-archive
+Master :struchu-remote:"MuttArchive"
+Slave :struchu-local:"MuttArchive"
+
+Channel makimo-inbox
+Master :makimo-remote:"INBOX"
+Slave :makimo-local:Odebrane
+
+Channel makimo-sent
+Master :makimo-remote:"[Gmail]/Wys&AUI-ane"
+Slave :makimo-local:Wysłane
+
+Channel makimo-trash
+Master :makimo-remote:"[Gmail]/Kosz"
+Slave :makimo-local:Kosz
+
+Channel makimo-spam
+Master :makimo-remote:"[Gmail]/Spam"
+Slave :makimo-local:Spam
+
+Channel makimo-drafts
+Master :makimo-remote:"[Gmail]/Wersje robocze"
+Slave :makimo-local:"Wersje robocze"
+
+Channel makimo-archive
+Master :makimo-remote:"MuttArchive"
+Slave :makimo-local:"MuttArchive"
+
+Create slave
+SyncState *
+
+Group struchu-mail-1
+Channel struchu-inbox
+Channel struchu-sent
+Channel struchu-trash
+
+Group struchu-mail-2
+Channel struchu-spam
+Channel struchu-drafts
+Channel struchu-archive
+
+Group makimo-mail-1
+Channel makimo-inbox
+Channel makimo-sent
+Channel makimo-trash
+
+Group makimo-mail-2
+Channel makimo-spam
+Channel makimo-drafts
+Channel makimo-archive

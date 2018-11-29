@@ -1,0 +1,20 @@
+unbind-key j
+unbind-key k
+
+bind-key j down
+bind-key k up
+
+unbind-key o
+unbind-key O
+
+bind-key v open-in-browser-and-mark-read
+bind-key V open-in-browser
+
+unbind-key u
+unbind-key ^B
+bind-key ^b show-urls
+
+# bindings for opening files
+
+macro g  set browser "nohup mpv --loop-file %u" ; open-in-browser ; set browser "qutebrowser %u >/dev/null 2>&1 &"
+macro y  set browser "nohup mpv %u" ; open-in-browser ; set browser "qutebrowser %u >/dev/null 2>&1 &"

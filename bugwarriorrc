@@ -1,0 +1,28 @@
+[general]
+targets = makimo_jira, makimo_github
+inline_links = False
+annotation_links = True
+annotation_comments = True
+
+[makimo_jira]
+service = jira
+jira.base_uri = https://makimo.atlassian.net
+jira.username = marcin.strus@makimo.pl
+jira.password = @oracle:eval:pass makimo.atlassian.net/marcin.strus@makimo.pl-token
+jira.query = assignee = 'marcin.strus' AND resolution = Unresolved AND status != "In Review" AND status != "Ready For Implementation"
+jira.description_template = {{jirasummary}}
+jira.import_sprints_as_tags = True
+jira.import_labels_as_tags = True
+jira.label_template = jira_{{label}}
+
+[makimo_github]
+service = github
+github.username = makimo
+github.login = struchu@gmail.com
+github.token = @oracle:eval:pass github.com/struchu@gmail.com-token
+github.import_labels_as_tags = True
+github.label_template = gh_{{label}}
+github.description_template = #{{githubnumber}} {{githubtitle}}
+github.query = assignee:Struchu is:open
+github.include_user_issues = False
+github.include_user_repos = False

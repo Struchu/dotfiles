@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while :
+do
+    echo `date +"%T"`
+
+    mbsync struchu-mail-1 &
+    mbsync struchu-mail-2 &
+    mbsync makimo-mail-1 &
+    mbsync makimo-mail-2 &
+    
+    wait
+
+    sleep 120
+done

@@ -1,0 +1,1 @@
+../../../src/weechat/rslap/rslap.pl

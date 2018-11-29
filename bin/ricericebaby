@@ -1,0 +1,56 @@
+#!/bin/bash
+
+shopt -s globstar
+
+destdir=$(pwd)
+base=~/dotfiles
+restricted=("bin" "src" "img" "templates")
+dotfilesold="dotfiles_old"
+predefined_dirs=("Workspace" "Downloads" ".mopidy" ".logs")
+
+mkdir -p "$dotfilesold"
+
+function containsElement {
+    local e match="$1"
+    shift
+    for e; do [[ "$e" == "$match" ]] && return 0; done
+    return 1
+}
+
+dirs=("$base"/**/*)
+dirs=("${dirs[@]#"$base"/}")
+
+for src in "${dirs[@]}"; do
+    if containsElement `echo "$src" | cut -d/ -f1` "${restricted[@]}"; then
+        continue
+    fi
+
+    target=".$src"
+    realsrc="$base/$src"
+
+    if [ -d "$target" ]; then
+        mkdir -p "$dotfilesold/$target"
+    fi
+
+    if [ -f "$target" ] || [ -h "$target" ]; then
+        mv "$target" "$dotfilesold/$target"
+    fi
+
+    if [ -d "$realsrc" ]; then
+        mkdir -p "$target"
+    fi
+
+    if [ -f "$realsrc" ] || [ -h "$realsrc" ]; then
+        ln -s "$realsrc" "$target"
+    fi
+done
+
+# prepare directories
+for dir in "${predefined_dirs[@]}"; do
+    mkdir "$dir"
+done
+
+git clone https://github.com/VundleVim/Vundle.vim.git .vim/bundle/Vundle.vim
+
+# Prepare calcurse directories.
+mkdir -p .calcurse/caldav

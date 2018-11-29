@@ -1,0 +1,175 @@
+[colors]
+background = #fdf6e3
+foreground = #657b83
+focused = #eee8d5
+urgent = #586e75
+
+[bar/top]
+width = 100%
+height = 24
+background = ${colors.background}
+foreground = ${colors.foreground}
+font-0 = Menlo For Powerline:size=10;2
+font-1 = Font Awesome 5 Free Regular:size=10;2
+font-2 = Font Awesome 5 Free Solid:size=10;2
+dpi = 0
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 0
+
+underline-size = 3
+overline-size = 3
+
+[bar/top-left]
+monitor = DP1
+inherit = bar/top
+modules-left = bspwm
+modules-right = filesystem memory cpu date time
+
+[bar/top-right]
+monitor = HDMI1
+inherit = bar/top
+modules-left = bspwm
+modules-right = temper mail
+
+[bar/thinkpad]
+monitor = eDP1
+inherit = bar/top
+modules-left = bspwm
+modules-right = filesystem wifi battery-int battery cpu mail date time
+
+[bar/spotify]
+monitor = DP1
+inherit = bar/top
+bottom = true
+
+modules-center = mpd
+modules-right = volume
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[module/bspwm]
+type = internal/bspwm
+
+format = <label-state>
+
+label-mode = %mode%
+label-mode-padding = 1
+
+label-unfocused = %name%
+label-unfocused-padding = 1
+
+label-focused = %name%
+label-focused-background = ${colors.focused}
+label-focused-padding = 1
+
+label-empty = %name%
+label-empty-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+label-occupied-underline = ${colors.urgent}
+
+label-urgent = %name%
+label-urgent-background = ${colors.urgent}
+label-urgent-foreground = ${colors.background}
+label-urgent-padding = 1
+
+label-separator =
+label-separator-padding = 0
+
+[module/date]
+type = internal/date
+label = |  %date%
+date = %d-%m-%Y
+interval = 5
+
+[module/time]
+inherit = module/date
+label = |  %time%
+time = %H:%M
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+label = %percentage:3%%
+format-prefix = | 
+format-padding = 0
+
+[module/memory]
+type = internal/memory
+format = |  <label>
+label = %percentage_used:3%%
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 10
+label-mounted =  %percentage_used:3%%
+
+[module/mail]
+type = custom/script
+interval = 10
+exec = ~/dotfiles/bin/mail-notify.sh
+format = | <label>
+
+[module/temper]
+type = custom/script
+interval = 60
+exec = cat /tmp/temper.deg
+format =  <label>
+
+[module/mpd]
+type = internal/mpd
+
+format-online = <label-time> | <label-song>
+format-online-spacing = 0
+format-online-background = ${colors.background}
+format-online-padding = 3
+
+format-offline = <label-offline>
+
+label-offline = So silent...
+
+label-song-maxlen = 300
+label-song-ellipsis = true
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <label-volume>
+label-volume =  %percentage:3%%
+
+label-muted =  %percentage:3%%
+
+[module/battery-int]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = AC
+time-format = %H:%M
+
+format-charging = |  <label-charging>
+label-charging =  %percentage:3%%
+
+format-discharging = |  <label-discharging>
+label-discharging = %percentage:3%%
+
+label-full = 
+
+[module/battery]
+inherit = module/battery-int
+battery = BAT1
+
+format-charging = |  <label-charging>
+format-discharging = |  <label-discharging>
+
+[module/wifi]
+type = internal/network
+interface = wlp3s0
+
+format-connected = | 
+format-disconnected = | 

@@ -1,0 +1,10 @@
+[user]
+	email = marcin.strus@makimo.pl
+	name = Marcin Struś
+[push]
+	default = simple
+[alias]
+        files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+        stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+        review = !vim -p $(git files) +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
+        reviewone = !vim -p +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"

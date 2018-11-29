@@ -1,0 +1,12 @@
+mailboxes =struchu/Odebrane
+mailboxes "=struchu/Wersje robocze"
+mailboxes "=struchu/Wysłane"
+mailboxes =struchu/MuttArchive
+mailboxes =struchu/Kosz =struchu/Spam
+
+mailboxes =makimo/Odebrane
+mailboxes "=makimo/Wersje robocze"
+mailboxes "=makimo/Wysłane"
+mailboxes =makimo/MuttArchive
+mailboxes =makimo/Kosz =makimo/Spam
+

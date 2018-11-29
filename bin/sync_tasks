@@ -1,0 +1,3 @@
+#!/bin/bash
+
+while :; do echo `date +"%T"`; bugwarrior-pull; task sync; sleep 120; done

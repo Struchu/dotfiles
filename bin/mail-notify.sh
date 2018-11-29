@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function count () {
+    cd ~/.mail/$1/Odebrane/new
+    count=$(find . ! -name . -prune -print | grep -c /)
+    echo $count
+}
+
+personal=`count 'struchu'`
+company=`count 'makimo'`
+
+if [ $personal -eq 0 ] && [ $company -eq 0 ]; then
+    echo -n 
+else
+    echo -n 
+fi
+
+echo " $personal/$company"

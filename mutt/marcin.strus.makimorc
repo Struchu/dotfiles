@@ -1,0 +1,18 @@
+set from = "marcin.strus@makimo.pl"
+set realname = "Marcin Struś"
+set header_cache = ~/.mutt/makimo/cache/headers
+set message_cachedir = ~/.mutt/makimo/cache/bodies
+set certificate_file = ~/.mutt/makimo/certificates
+set sendmail = "msmtp -a makimo"
+
+set postponed = "+makimo/Wersje robocze"
+set record = "+makimo/Wysłane"
+
+set query_command = "goobook -c ~/.mutt/marcin.strus.goobookrc query %s"
+
+macro index D "<save-message>+makimo/Kosz<enter>" "move message to trash"
+macro index S "<save-message>+makimo/Spam<enter>" "move message to spam"
+macro index A "<save-message>+makimo/MuttArchive<enter>" "archive message"
+macro index I "<save-message>+makimo/Odebrane<enter>" "move message to Inbox"
+
+macro index \Ca "<change-folder>+struchu/Odebrane<enter>" "go to personal account"

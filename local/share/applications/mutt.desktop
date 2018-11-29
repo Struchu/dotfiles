@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Mutt
+Comment=Launch mutt for email edition.
+Exec=neomutt
+Terminal=true
+MimeType=x-scheme-handler/mailto;
