@@ -19,17 +19,6 @@
 [submodule "src/hhpc"]
 	path = src/hhpc
 	url = https://github.com/aktau/hhpc.git
-[submodule "src/prettyping"]
-	path = src/prettyping
-	url = https://github.com/denilsonsa/prettyping.git
-[submodule "src/slstatus"]
-	path = src/slstatus
-	url = git@github.com:Struchu/slstatus.git
-	branch = struchu
-[submodule "src/dwm"]
-	path = src/dwm
-	url = git@github.com:Struchu/dwm.git
-	branch = struchu
 [submodule "src/st"]
 	path = src/st
 	url = git@github.com:Struchu/st.git
@@ -40,6 +29,3 @@
 [submodule "src/zplug"]
 	path = src/zplug
 	url = https://github.com/zplug/zplug
-[submodule "src/pfetch"]
-	path = src/pfetch
-	url = https://github.com/dylanaraps/pfetch.git
