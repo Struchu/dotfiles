@@ -22,7 +22,7 @@ filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-set guifont=Menlo\ For\ Powerline
+set guifont=Inconsolata
 
 "-------------- PLUGINS STARTS -----------------
 call vundle#begin()

@@ -14,7 +14,7 @@ def read_xresources(prefix):
 xresources = read_xresources('*')		
 
 # Font settings		
-c.fonts.monospace = 'Menlo for Powerline'		
+c.fonts.monospace = 'Inconsolata'		
 
 # HTTP configuration		
 c.content.headers.accept_language = 'pl_PL,pl'		
