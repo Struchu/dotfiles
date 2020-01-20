@@ -4,7 +4,7 @@ super + Return
 
 # program launcher and pass integration
 super + {space,z}
-    {dmenu_run -p run:,passmenu --type -p pass:} -fn 'Menlo for Powerline:size=10' -nb '#fdf6e3' -nf '#657b83' -sb '#eee8d5' -sf '#657b83'
+    {dmenu_run -p run:,passmenu --type -p pass:} -fn 'Inconsolata:size=13' -nb '#fdf6e3' -nf '#657b83' -sb '#eee8d5' -sf '#657b83'
 
 # screen lock
 super + shift + a
@@ -16,7 +16,7 @@ super + Escape
 
 # quit/restart bspwm
 super + shift + q
-    bspc quit
+    power_menu.sh
 
 # close and kill
 super + q
