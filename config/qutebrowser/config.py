@@ -14,7 +14,8 @@ def read_xresources(prefix):
 xresources = read_xresources('*')		
 
 # Font settings		
-c.fonts.monospace = 'Inconsolata'		
+c.fonts.default_family = 'Inconsolata'		
+c.fonts.default_size = '16px'
 
 # HTTP configuration		
 c.content.headers.accept_language = 'pl_PL,pl'		
