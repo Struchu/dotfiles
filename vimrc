@@ -31,19 +31,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'xolox/vim-misc'
-Plugin 'vim-scripts/a.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'jez/vim-c0'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'sukima/xmledit'
-Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fireplace'
@@ -68,8 +61,15 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_left_alt_sep=''
 let g:airline_right_alt_sep=''
+let g:solarized_diffmode='low'
 set background=light
 colorscheme solarized
+
+"-----------DIFF COLORS SETTING--------
+exe "hi! DiffAdd        term=none cterm=none ctermfg=none ctermbg=7"
+exe "hi! DiffChange     term=none cterm=none ctermfg=none ctermbg=7"
+exe "hi! DiffDelete     term=bold cterm=bold ctermfg=1"
+exe "hi! DiffText       term=none cterm=underline ctermfg=none ctermbg=7"
 
 "-----------FZF SETTINGS---------------
 nnoremap <C-P> :Files<CR>
