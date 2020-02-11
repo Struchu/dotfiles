@@ -1,5 +1,5 @@
-text/html;              lynx %s; nametemplate=%s.html; needsterminal
-text/html;              lynx -dump %s ; copiousoutput;
+text/html;              lynx %s -lss=~/.config/lynx/lynx.lss; nametemplate=%s.html; needsterminal
+text/html;              lynx -dump %s ; nametemplate=%s.html; copiousoutput
 
 image/gif;              mpv --loop-file --no-terminal %s &;
 image/*;                nohup feh -F %s &;

@@ -55,7 +55,7 @@ super + shift + o
     st -n develop -e tmux new-session -A -s develop
 
 super + shift + d
-    st -n duck -e tmux new-session -A -s duck "ddgr --url-handler lynx"
+    st -n duck -e tmux new-session -A -s duck "LYNX_LSS=\"$HOME/.config/lynx/lynx.lss\" ddgr --url-handler lynx"
 
 super + shift + n
     st -n new -e newsboat
