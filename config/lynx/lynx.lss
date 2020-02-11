@@ -53,15 +53,15 @@ br:		normal:			default
 alink:		reverse:		blue:           lightgray
 status:		normal:		        green:          lightgray
 alert:		bold:			red:		lightgray
-whereis:	reverse+underline:	magenta:	cyan
+whereis:	reverse+underline:	lightgray:	yellow
 # currently not used
 #value:normal:green
 
-menu.bg:	normal:			black:		lightgray
+menu.bg:	normal:			white:		white
 menu.frame:	normal:			black:		lightgray
-menu.entry:	normal:			lightgray:	black
-menu.n:		normal:			red:		gray
-menu.active:	normal:			yellow:		black
+menu.entry:	normal:			yellow:	        lightgray
+menu.n:		normal:			blue:		lightgray
+menu.active:	normal:			blue:		lightgray
 menu.sb:	normal:			brightred:	lightgray
 
 forwbackw.arrow:reverse
