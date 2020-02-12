@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ -z "$1" ]; then
+    exit 0
+fi
+
 case $1 in
     http*://*youtube.com/watch?*|http*://youtu.be/*)
         nohup mpv "ytdl://$1" >/dev/null 2>&1 &
