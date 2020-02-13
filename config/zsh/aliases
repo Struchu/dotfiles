@@ -1,2 +1,2 @@
 alias ls='ls --color=auto'
-alias lynx='lynx -cookies=off -scrollbar'
+alias lynx='lynx -cookies=off -scrollbar -scrollbar_arrow=off'
