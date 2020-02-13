@@ -46,6 +46,10 @@ super + {j,k}
 super + {h,l}
     bspc monitor -f {prev,next}
 
+# swap nodes between monitors
+super + shift + {h,l}
+    bspc node -m {prev,next}
+
 # programs
 
 super + shift + p
