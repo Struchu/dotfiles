@@ -1,8 +1,49 @@
 #! /bin/sh
 
+xrdb -load ~/.Xresources
+
+# Setup the keyboard
+setxkbmap pl
+setxkbmap -option caps:escape
+xset r off
+
+# Enable dotfiles extensions
+export PATH=$HOME/dotfiles/bin/:$PATH
+
+# Disable touchpad on ThinkPadX240
+TOUCH_PAD="Synaptics TM2927-001"
+
+if xinput list | grep "$TOUCH_PAD"; then
+    xinput set-prop "$TOUCH_PAD" "Synaptics Off" 1
+fi
+
+# Set the screens
+if xrandr | grep eDP1 >/dev/null; then
+    xbacklight -set 10
+    xrandr --dpi 120
+else
+    xrandr --output DP1 --left-of HDMI1
+fi
+
+# Set background color
+xsetroot -solid "#eee8d5"
+
+# Autostart
+killall -q xbanish
+killall -q check_mail
+killall -q sync_tasks
+killall -q temp.sh
+killall -q sxhkd
+
+xbanish &
+check_mail &
+sync_tasks &
+temp.sh &
 sxhkd &
+
 ~/dotfiles/bin/launch.sh
 
+# Setup the desktops
 if [ $(hostname) = 'calla-bryn-sturgis' ]; then
     bspc monitor DP1 -d 1 3 5 7 9
     bspc monitor HDMI1 -d 2 4 6 8 10
@@ -10,6 +51,7 @@ elif [ $(hostname) = 'gilead' ]; then
     bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 fi
 
+# BSPWM config
 bspc config border_width                3
 bspc config window_gap                  0
 
