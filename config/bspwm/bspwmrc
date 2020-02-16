@@ -29,12 +29,6 @@ fi
 xsetroot -solid "#eee8d5"
 
 # Autostart
-killall -q xbanish
-killall -q check_mail
-killall -q sync_tasks
-killall -q temp.sh
-killall -q sxhkd
-
 xbanish &
 check_mail &
 sync_tasks &

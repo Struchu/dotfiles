@@ -8,7 +8,7 @@ END
 
 case "$option" in
     Logout)
-        bspc quit
+        logout.sh
         ;;
     Reboot)
         sudo reboot
