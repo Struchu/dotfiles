@@ -9,6 +9,7 @@ set number relativenumber
 set showcmd
 set incsearch
 set nohlsearch
+set cursorline
 
 set shortmess+=aI
 

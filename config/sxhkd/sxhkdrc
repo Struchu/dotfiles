@@ -61,6 +61,9 @@ super + shift + o
 super + shift + d
     st -n duck -e tmux new-session "LYNX_LSS=\"$HOME/.config/lynx/lynx.lss\" ddgr --url-handler browser.sh"
 
+super + shift + b
+    st -n buku -e tmux new-session buku
+
 super + shift + n
     st -n new -e newsboat
 
