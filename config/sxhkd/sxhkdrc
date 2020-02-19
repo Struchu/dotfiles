@@ -82,5 +82,5 @@ XF86Tools
 XF86Mail
     st -n mail -e neomutt
 
-super + shift + l ; {m,p}
+super + shift + m ; super + shift + {m,p}
     st -n {mail -e neomutt,player -e ncmpcpp}
