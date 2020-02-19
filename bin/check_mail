@@ -11,5 +11,6 @@ do
     
     wait
 
+    notmuch new --quiet 2>/dev/null
     sleep 120
 done

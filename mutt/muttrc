@@ -36,6 +36,13 @@ source ~/.mutt/mailboxes
 folder-hook struchu "source ~/.mutt/struchu.gmailrc"
 folder-hook makimo "source ~/.mutt/marcin.strus.makimorc"
 
+bind pager,index \Cd half-down
+bind pager,index \Cu half-up
+bind pager,index \Cf next-page
+bind pager,index \Cb previous-page
+bind pager,index G last-entry
+bind pager,index g first-entry
+
 source ~/.mutt/struchu.gmailrc
 
 macro attach S <save-entry><bol>~/Downloads/ "save attachment in downloads directory"
@@ -47,3 +54,7 @@ macro pager,index \Ch <sidebar-prev-new> "move cursor to previous mailbox with n
 macro pager,index \Co <sidebar-open> "open selected inbox"
 
 bind editor <Tab> complete-query
+
+bind pager,index x change-vfolder
+bind pager,index + entire-thread
+bind pager,index \Cx vfolder-from-query
