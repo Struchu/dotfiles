@@ -40,13 +40,14 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fireplace'
 Plugin 'keith/swift.vim'
 Plugin 'wikitopian/hardmode'
 Plugin 'posva/vim-vue'
 Plugin 'junegunn/fzf.vim'
 Plugin 'cohama/lexima.vim'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'guns/vim-sexp'
+Plugin 'liquidz/vim-iced'
 
 call vundle#end()
 "-------------- PLUGINS END --------------------
@@ -127,6 +128,9 @@ nnoremap <leader>d :ToggleDocmode<CR>
 "-----------VUE.JS SUPPORT-------------
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType *.vue syntax sync fromstart
+
+"-----------CLOJURE--------------------
+let g:iced_enable_default_key_mappings = v:true
 
 "-----------RAINBOW PARENTHESES--------
 au VimEnter * RainbowParenthesesActivate
