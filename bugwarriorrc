@@ -2,7 +2,7 @@
 targets = makimo_jira, makimo_github
 inline_links = False
 annotation_links = True
-annotation_comments = True
+annotation_comments = False
 
 [makimo_jira]
 service = jira
