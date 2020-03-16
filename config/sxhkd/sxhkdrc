@@ -2,6 +2,9 @@
 super + Return
     st -e tmux
 
+super + shift + Return
+    st
+
 # program launcher and pass integration
 super + {space,z}
     {dmenu_run -p run:,passmenu --type -p pass:} -i -fn 'inconsolata:size=13' -nb '#fdf6e3' -nf '#657b83' -sb '#eee8d5' -sf '#657b83'
