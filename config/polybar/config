@@ -54,9 +54,10 @@ margin-bottom = 0
 [module/bspwm]
 type = internal/bspwm
 
-format = <label-state>
+format = <label-state> <label-mode>
 
-label-mode = %mode%
+label-monocle = 
+label-tiled = 
 label-mode-padding = 1
 
 label-unfocused = %name%
