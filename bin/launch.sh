@@ -9,5 +9,9 @@ if [ $(hostname) = 'calla-bryn-sturgis' ]; then
     polybar top-right &
     polybar spotify &
 elif [ $(hostname) = 'gilead' ]; then
+    if [ "$MONITOR_COUNT" = 2 ]; then
+        polybar top-left-thinkpad &
+    fi
+
     polybar thinkpad &
 fi

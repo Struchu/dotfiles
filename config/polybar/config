@@ -27,6 +27,12 @@ inherit = bar/top
 modules-left = bspwm
 modules-right = filesystem memory cpu date time
 
+[bar/top-left-thinkpad]
+monitor = DP1
+inherit = bar/top
+modules-left = bspwm
+modules-right =
+
 [bar/top-right]
 monitor = HDMI1
 inherit = bar/top

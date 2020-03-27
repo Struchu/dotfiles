@@ -6,7 +6,7 @@ else
     OP="desktop -f"
 fi
 
-if [ $(hostname) = 'calla-bryn-sturgis' ]; then
+if [ "$MONITOR_COUNT" = 2 ]; then
     if [ "$2" = "1" ]; then bspc $OP '^1'; fi
     if [ "$2" = "2" ]; then bspc $OP '^6'; fi
     if [ "$2" = "3" ]; then bspc $OP '^2'; fi
