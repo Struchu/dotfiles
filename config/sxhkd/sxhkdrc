@@ -17,6 +17,10 @@ super + shift + a
 super + Escape
     pkill -USR1 -x sxhkd
 
+# reload BSPWM
+super + shift + Escape
+    bspc wm -r
+
 # quit/restart bspwm
 super + shift + q
     power_menu.sh
@@ -30,7 +34,7 @@ super + t
     bspc desktop -l next
 
 # swap the current node and the biggest node
-super + shift + Return
+super + shift + space
     bspc node -s biggest.local
 
 #
