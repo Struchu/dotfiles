@@ -47,7 +47,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'cohama/lexima.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
-Plugin 'liquidz/vim-iced'
+Plugin 'tpope/vim-fireplace'
 
 call vundle#end()
 "-------------- PLUGINS END --------------------
