@@ -12,6 +12,7 @@ export PATH=$HOME/dotfiles/bin/:$PATH
 
 # Disable touchpad on ThinkPadX240
 TOUCH_PAD="Synaptics TM2927-001"
+TOUCHSCREEN="ELAN Touchscreen"
 
 if xinput list | grep "$TOUCH_PAD"; then
     xinput set-prop "$TOUCH_PAD" "Synaptics Off" 1
@@ -27,6 +28,7 @@ if xrandr | grep eDP1 >/dev/null; then
 
     xbacklight -set 10
     xrandr --dpi 120
+    xinput --map-to-output "$TOUCHSCREEN" "eDP1"
 else
     xrandr --output DP1 --left-of HDMI1
 fi
