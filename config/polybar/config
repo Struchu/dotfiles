@@ -43,7 +43,7 @@ modules-right = temper mail
 monitor = eDP1
 inherit = bar/top
 modules-left = bspwm
-modules-right = filesystem wifi battery-int battery cpu mail date time
+modules-right = volume filesystem wifi battery-int battery cpu mail date time
 
 [bar/spotify]
 monitor = DP1
@@ -115,7 +115,7 @@ label = %percentage_used:3%%
 type = internal/fs
 mount-0 = /
 interval = 10
-label-mounted =  %percentage_used:3%%
+label-mounted = |  %percentage_used:3%%
 
 [module/mail]
 type = custom/script
