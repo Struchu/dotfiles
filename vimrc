@@ -29,8 +29,7 @@ set guifont=Inconsolata
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
@@ -55,17 +54,23 @@ filetype plugin indent on
 
 "----- GENERAL SETTINGS-------
 set laststatus=2
-let g:airline_powerline_fonts = 0
-let g:airline_detect_paste=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='solarized'
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_left_alt_sep=''
-let g:airline_right_alt_sep=''
-let g:solarized_diffmode='low'
 set background=light
 colorscheme solarized
+
+"----- LIGHTLINE SETTINGS----
+let g:lightline = {
+    \ 'colorscheme': 'solarized',
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'gitbranch' ],
+    \             [ 'filename', 'modified' ]],
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ]]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'FugitiveHead'
+    \ },
+    \ }
 
 "-----------DIFF COLORS SETTING--------
 exe "hi! DiffAdd        term=none cterm=none ctermfg=none ctermbg=7"
