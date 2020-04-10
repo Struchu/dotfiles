@@ -63,9 +63,12 @@ let g:lightline = {
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch' ],
-    \             [ 'filename', 'modified' ]],
+    \             [ 'relativepath', 'modified' ]],
     \   'right': [ [ 'lineinfo' ],
     \              [ 'percent' ]]
+    \ },
+    \ 'inactive': {
+    \   'left': [ [ 'relativepath', 'modified' ] ]
     \ },
     \ 'component_function': {
     \   'gitbranch': 'FugitiveHead'
