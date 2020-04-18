@@ -5,7 +5,7 @@ fi
 
 # Set SSH to use gpg-agent if it is configured to do so
 GNUPGCONFIG="${GNUPGHOME:-"$HOME/.gnupg"}/gpg-agent.conf"
-if [ -r "$GNUPGCONFIG" ] && grep -q enable-ssh-support "$GNUPGCONFIG"; then
+if [ -z "$SSH_TTY" ] && [ -r "$GNUPGCONFIG" ] && grep -q enable-ssh-support "$GNUPGCONFIG"; then
   unset SSH_AGENT_PID
   export SSH_AUTH_SOCK="$GPG_AGENT_SOCK.ssh"
 fi
