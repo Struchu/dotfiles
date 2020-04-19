@@ -1,4 +1,4 @@
-GPG_AGENT_SOCK=$(gpgconf --list-dirs | grep agent-socket | cut -d : -f 2)
+export GNUPGHOME="$HOME/.gnupg"
 
 if [ -z "$SSH_TTY" ]; then
   unset SSH_AGENT_PID
