@@ -43,6 +43,15 @@ sync_tasks &
 temp.sh &
 sxhkd &
 
+# Start GPG agent
+GPG_AGENT_SOCK=$(gpgconf --list-dirs | grep agent-socket | cut -d : -f 2)
+if [ ! -S $GPG_AGENT_SOCK ]; then
+  gpg-agent --daemon >/dev/null 2>&1
+fi
+
+export GPG_TTY=$(tty)
+echo UPDATESTARTUPTTY | gpg-connect-agent >/dev/null 2>&1
+
 ~/dotfiles/bin/launch.sh
 
 # Setup the desktops
