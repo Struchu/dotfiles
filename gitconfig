@@ -1,6 +1,11 @@
 [user]
 	email = marcin.strus@makimo.pl
 	name = Marcin Struś
+        signingkey = 0xB41E058860A2C477
+[gpg]
+        program = /usr/bin/gpg2
+[commit]
+        gpgSign = true
 [push]
 	default = simple
 [alias]
