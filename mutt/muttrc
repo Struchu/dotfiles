@@ -58,3 +58,5 @@ bind editor <Tab> complete-query
 bind pager,index x change-vfolder
 bind pager,index + entire-thread
 bind pager,index \Cx vfolder-from-query
+
+source ~/.mutt/gpg.rc
