@@ -6,6 +6,8 @@
         program = /usr/bin/gpg2
 [commit]
         gpgSign = true
+[tag]
+        gpgSign = true
 [push]
 	default = simple
 [alias]
