@@ -34,7 +34,7 @@ super + t
     bspc desktop -l next
 
 # swap the current node and the biggest node
-super + shift + space
+super + shift + f
     bspc node -s biggest.local
 
 #
