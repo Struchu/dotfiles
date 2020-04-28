@@ -15,7 +15,7 @@ TOUCH_PAD="Synaptics TM2927-001"
 TOUCHSCREEN="ELAN Touchscreen"
 
 if xinput list | grep "$TOUCH_PAD"; then
-    xinput set-prop "$TOUCH_PAD" "Synaptics Off" 1
+    xinput set-prop "$TOUCH_PAD" "libinput Tapping Drag Enabled" 0
 fi
 
 export MONITOR_COUNT=$(xrandr | grep ' connected' | wc -l)
