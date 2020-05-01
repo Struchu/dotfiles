@@ -120,7 +120,7 @@ label-mounted = |  %percentage_used:3%%
 [module/mail]
 type = custom/script
 interval = 10
-exec = ~/dotfiles/bin/mail-notify.sh
+exec = ~/dotfiles/bin/mail_notify
 format = | <label>
 
 [module/temper]

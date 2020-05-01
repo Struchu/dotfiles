@@ -8,7 +8,7 @@ END
 
 case "$option" in
     Logout)
-        logout.sh
+        logout_wm
         ;;
     Reboot)
         sudo reboot

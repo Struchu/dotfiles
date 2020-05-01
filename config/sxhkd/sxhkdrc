@@ -11,7 +11,7 @@ super + {space,z}
 
 # screen lock
 super + shift + a
-    lock.sh
+    lock
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -23,7 +23,7 @@ super + shift + Escape
 
 # quit/restart bspwm
 super + shift + q
-    power_menu.sh
+    power_menu
 
 # close and kill
 super + q
@@ -43,7 +43,7 @@ super + shift + f
 
 # focus or send to the given desktop
 super + {_,shift + }{1,2,3,4,5,6,7,8,9,0}
-    worksel.sh {focus,swap} '{1,2,3,4,5,6,7,8,9,10}'
+    select_workspace {focus,swap} '{1,2,3,4,5,6,7,8,9,10}'
 
 # traverse the nodes
 super + {j,k}
@@ -66,7 +66,7 @@ super + shift + o
     st -n develop -e tmux new-session -A -s develop
 
 super + shift + d
-    st -n duck -e tmux new-session "LYNX_LSS=\"$HOME/.config/lynx/lynx.lss\" ddgr --url-handler browser.sh"
+    st -n duck -e tmux new-session "LYNX_LSS=\"$HOME/.config/lynx/lynx.lss\" ddgr --url-handler browser"
 
 super + shift + b
     st -n buku -e tmux new-session buku

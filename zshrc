@@ -4,7 +4,7 @@ CONF_DIR="$HOME/.config/zsh"
 [ -f "$CONF_DIR/gpg-agent.zsh" ] && source "$CONF_DIR/gpg-agent.zsh"
 
 # Tweak path
-PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/dotfiles/bin:$HOME/.local/bin":$PATH
 
 autoload -U colors && colors
 zstyle ':completion:*' completer _complete _ignored
