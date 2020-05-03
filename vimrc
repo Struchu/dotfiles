@@ -17,6 +17,8 @@ set mouse=
 set colorcolumn=
 set completeopt-=preview
 
+set splitbelow splitright
+
 set colorcolumn=80
 
 filetype off
@@ -121,6 +123,11 @@ nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-h> <C-w><C-h>
 nnoremap <C-l> <C-w><C-l>
+
+nmap <leader>tt :term<CR>
+nmap <leader>tv :vert term<CR>
+
+nnoremap <leader>sr <C-W>r
 
 "-----------MARKDOWN PREVIEW-----------
 let vim_markdown_preview_hotkey='<C-m>'
