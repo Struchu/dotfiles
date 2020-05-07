@@ -29,3 +29,9 @@
 [submodule "src/zplug"]
 	path = src/zplug
 	url = https://github.com/zplug/zplug
+[submodule "src/dwm"]
+	path = src/dwm
+	url = git@github.com:Struchu/dwm.git
+[submodule "src/slstatus"]
+	path = src/slstatus
+	url = git@github.com:Struchu/slstatus.git
