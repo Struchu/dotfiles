@@ -1,5 +1,10 @@
 #!/bin/sh
 
+ambient_temperature () {
+    echo -n " "
+    cat /tmp/temper.deg || echo "N/A"
+}
+
 mail () {
     mail_notify
 }
@@ -8,4 +13,4 @@ date_time () {
     date '+%Y-%m-%d %H:%M'
 }
 
-echo "$(mail) | $(date_time)"
+echo " $(ambient_temperature) | $(mail) | $(date_time)"
