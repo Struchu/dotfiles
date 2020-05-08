@@ -1,9 +1,12 @@
 #!/bin/sh
 
-tmux list-sessions | \
+SESSION=$(tmux list-sessions | \
     cut -d: -f1 | \
     dmenu -fn "Inconsolata:pixelsize=19:anitalias=true:autohint=true" \
         -nb "#fdf6e3" -nf "#657b83" \
         -sb "#eee8d5" -sf "#657b83" \
-        -p "tmux:" | \
-    exec xargs st -e tmux new-session -A -s
+        -p "tmux:")
+
+[ -z "$SESSION" ] && exec st -e tmux new-session
+
+exec st -e tmux new-session -A -s "$SESSION"
