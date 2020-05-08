@@ -26,4 +26,9 @@ battery_status () {
     cat "/sys/class/power_supply/$1/capacity"
 }
 
-echo " $(battery_status BAT0) $(battery_status BAT1) | $(network_status wlp3s0) | $(ambient_temperature) | $(mail) | $(date_time)"
+empty_space () {
+    echo 
+    df -h | grep "$1$" | awk '{ print $4 }'
+}
+
+echo "$(empty_space /) | $(battery_status BAT0) $(battery_status BAT1) | $(network_status wlp3s0) | $(ambient_temperature) | $(mail) | $(date_time)"
