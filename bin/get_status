@@ -17,4 +17,13 @@ network_status () {
    [ $(cat "/sys/class/net/$1/operstate") = "up" ] && echo   || echo 
 }
 
-echo " $(network_status wlp3s0) | $(ambient_temperature) | $(mail) | $(date_time)"
+battery_status () {
+    STATUS=$(cat "/sys/class/power_supply/$1/status")
+    [ $STATUS = "Discharging" ] && echo  || true
+    [ $STATUS = "Charging" ] && echo 
+    [ $STATUS != "Discharging" ] && [ $STATUS != "Charging" ] && echo 
+
+    cat "/sys/class/power_supply/$1/capacity"
+}
+
+echo " $(battery_status BAT0) $(battery_status BAT1) | $(network_status wlp3s0) | $(ambient_temperature) | $(mail) | $(date_time)"
