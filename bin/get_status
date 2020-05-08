@@ -31,4 +31,6 @@ empty_space () {
     df -h | grep "$1$" | awk '{ print $4 }'
 }
 
-echo "$(empty_space /) | $(battery_status BAT0) $(battery_status BAT1) | $(network_status wlp3s0) | $(ambient_temperature) | $(mail) | $(date_time)"
+[ $(hostname) = 'gilead' ] \
+    && echo "$(empty_space /) | $(battery_status BAT0) $(battery_status BAT1) | $(network_status wlp3s0) | $(mail) | $(date_time)" \
+    || echo "$(empty_space /) | $(network_status enp2s0) | $(ambient_temperature) | $(mail) | $(date_time)"
