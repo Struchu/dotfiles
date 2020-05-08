@@ -13,4 +13,8 @@ date_time () {
     date '+%Y-%m-%d %H:%M'
 }
 
-echo " $(ambient_temperature) | $(mail) | $(date_time)"
+network_status () {
+   [ $(cat "/sys/class/net/$1/operstate") = "up" ] && echo   || echo 
+}
+
+echo " $(network_status wlp3s0) | $(ambient_temperature) | $(mail) | $(date_time)"
