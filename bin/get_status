@@ -1,0 +1,11 @@
+#!/bin/sh
+
+mail () {
+    mail_notify
+}
+
+date_time () {
+    date '+%Y-%m-%d %H:%M'
+}
+
+echo "$(mail) | $(date_time)"

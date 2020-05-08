@@ -14,7 +14,7 @@ setxkbmap pl
 setxkbmap -option caps:escape
 xset r off
 
-PATH="$HOME/dotfiles/bin:$PATH"
+export PATH="$HOME/dotfiles/bin:$PATH"
 
 # Disable touchpad on ThinkPadX240
 TOUCH_PAD="Synaptics TM2927-001"
@@ -43,10 +43,10 @@ fi
 xsetroot -solid "#eee8d5"
 
 # Autostart
-xbanish &
-check_mail &
-sync_tasks &
-slstatus &
+killall -9 xbanish; xbanish &
+killall -9 check_mail; check_mail &
+killall -9 sync_tasks; sync_tasks &
+killall -9 statusbar; statusbar &
 
 # Start GPG agent
 GPG_AGENT_SOCK=$(gpgconf --list-dirs agent-socket)

@@ -1,3 +1,4 @@
 #!/bin/sh
 
+export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 exec lynx -cookies=off -scrollbar -scrollbar_arrow=off -nopause "$@"
