@@ -117,6 +117,7 @@ nnoremap <leader>Q :bufdo Bclose<CR>
 nnoremap + <C-a>
 nnoremap - <C-x>
 nmap <silent> <leader>\ :redraw!<CR>
+nnoremap <leader>cc :Gcommit --allow-empty<CR>
 
 "-----------PANE MOVEMENT--------------
 nnoremap <C-j> <C-w><C-j>
