@@ -10,6 +10,7 @@ set showcmd
 set incsearch
 set nohlsearch
 set cursorline
+set tabpagemax=100
 
 set shortmess+=aI
 
