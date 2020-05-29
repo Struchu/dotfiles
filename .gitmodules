@@ -32,3 +32,6 @@
 [submodule "src/dwm"]
 	path = src/dwm
 	url = git@github.com:Struchu/dwm.git
+[submodule "src/dwmblocks"]
+	path = src/dwmblocks
+	url = git@github.com:Struchu/dwmblocks.git
