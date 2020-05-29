@@ -71,7 +71,7 @@ let g:lightline = {
     \              [ 'percent' ]]
     \ },
     \ 'inactive': {
-    \   'left': [ [ 'relativepath', 'modified' ] ]
+    \   'left': [ [ 'gitbranch' ], [ 'relativepath', 'modified' ] ]
     \ },
     \ 'component_function': {
     \   'gitbranch': 'FugitiveHead'
