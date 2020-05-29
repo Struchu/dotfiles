@@ -1,0 +1,10 @@
+#!/bin/sh
+
+STATUS=$(cat "/sys/class/power_supply/$1/status")
+[ $STATUS = "Discharging" ] && echo -n  || true
+[ $STATUS = "Charging" ] && echo -n 
+[ $STATUS != "Discharging" ] && [ $STATUS != "Charging" ] && echo -n 
+
+echo -n " "
+
+cat "/sys/class/power_supply/$1/capacity" | awk '{ print $1 " " }'
