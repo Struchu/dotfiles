@@ -8,6 +8,8 @@
         gpgSign = true
 [tag]
         gpgSign = true
+[pull]
+        ff = only
 [push]
 	default = simple
 [alias]
