@@ -1,0 +1,3 @@
+#!/bin/sh
+
+amixer set Master $1 && volume_changed
