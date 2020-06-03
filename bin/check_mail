@@ -8,9 +8,10 @@ do
     mbsync struchu-mail-2 &
     mbsync makimo-mail-1 &
     mbsync makimo-mail-2 &
-    
+
     wait
 
+    mailbox_changed
     notmuch new --quiet 2>/dev/null
     sleep 120
 done
