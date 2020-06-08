@@ -49,6 +49,7 @@ Plugin 'cohama/lexima.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-fireplace'
+Plugin 'tyru/caw.vim'
 
 call vundle#end()
 "-------------- PLUGINS END --------------------
