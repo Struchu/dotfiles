@@ -1,5 +1,6 @@
 syntax on
 
+
 set shell=/bin/zsh
 set nocompatible
 set smartindent
@@ -104,6 +105,12 @@ let g:fzf_colors =
 
 "-----------CTAGS----------------------
 au FileType python set tags^=$VIRTUAL_ENV/tags
+
+"-----------GITGUTTER------------------
+highlight SignColumn ctermbg=7
+highlight GitGutterAdd ctermbg=7 ctermfg=2
+highlight GitGutterDelete ctermbg=7 ctermfg=1
+highlight GitGutterChange ctermbg=7 ctermfg=3
 
 "-----------YCM SETTINGS---------------
 let g:ycm_collect_identifiers_from_tags_files = 0
