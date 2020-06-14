@@ -51,6 +51,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tyru/caw.vim'
+Plugin 'vimwiki/vimwiki'
 
 call vundle#end()
 "-------------- PLUGINS END --------------------
