@@ -13,6 +13,13 @@ def read_xresources(prefix):
 
 xresources = read_xresources('*')
 
+# Default page and search engine
+c.url.default_page = 'https://searx.strus.guru'
+c.url.start_pages = 'https://searx.strus.guru'
+c.url.searchengines = {
+    'DEFAULT': 'https://searx.strus.guru/?q={}&categories=gen'
+}
+
 # Font settings
 c.fonts.default_family = 'Inconsolata'
 c.fonts.default_size = '16px'
