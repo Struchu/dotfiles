@@ -24,6 +24,7 @@ set splitbelow splitright
 set colorcolumn=80
 
 filetype off
+filetype plugin on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -103,6 +104,10 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+"-----------VIMWIKI--------------------
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                     \ 'syntax': 'markdown', 'ext': '.md'}]
 
 "-----------CTAGS----------------------
 au FileType python set tags^=$VIRTUAL_ENV/tags
