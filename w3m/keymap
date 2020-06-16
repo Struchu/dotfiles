@@ -1,1 +1,9 @@
-keymap h       BACK
+keymap g        NOTHING
+keymap gg       BEGIN
+keymap h        BACK
+keymap C-d      NEXT_HALF_PAGE
+keymap C-u      PREV_HALF_PAGE
+keymap :        GOTO_LINE
+
+keymap \\\t     COMMAND         "SET_OPTION display_borders=toggle; RESHAPE"
+keymap \\\s     COMMAND         "GOTO https://searx.strus.guru; NEXT_LINK; GOTO_LINK"
