@@ -12,7 +12,7 @@ ttrss-passwordeval "pass news.strus.guru/struchu"
 ttrss-flag-star "a"
 ttrss-flag-publish "p"
 
-browser "qutebrowser %u >/dev/null 2>&1 &"
+browser "url_handler"
 external-url-viewer "urlview"
 
 include "~/.newsboat/colors"
