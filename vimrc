@@ -53,6 +53,7 @@ Plugin 'guns/vim-sexp'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tyru/caw.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
 "-------------- PLUGINS END --------------------
