@@ -71,7 +71,7 @@ let g:lightline = {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch' ],
     \             [ 'relativepath', 'modified' ]],
-    \   'right': [ [ 'lineinfo' ],
+    \   'right': [ [ 'syntastic', 'lineinfo' ],
     \              [ 'percent' ]]
     \ },
     \ 'inactive': {
@@ -81,6 +81,13 @@ let g:lightline = {
     \   'gitbranch': 'FugitiveHead'
     \ },
     \ }
+
+"-----------TRAILING WHITESPACES-------
+
+highlight TrailingWhitespaces ctermbg=red guibg=red
+match TrailingWhitespaces /\s\+$/
+
+nnoremap <leader>tw :%s/\s\+$//g<CR>
 
 "-----------DIFF COLORS SETTING--------
 exe "hi! DiffAdd        term=none cterm=none ctermfg=none ctermbg=7"
