@@ -15,12 +15,11 @@ set tabpagemax=100
 set shortmess+=aI
 
 set mouse=
-set colorcolumn=
 set completeopt-=preview
 
 set splitbelow splitright
 
-set colorcolumn=80
+set colorcolumn=80,100
 
 filetype off
 filetype plugin on
