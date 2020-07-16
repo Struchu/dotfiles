@@ -8,10 +8,10 @@ END
 
 case "$option" in
     Reboot)
-        sudo reboot
+        doas reboot
         ;;
     "Power Off")
-        sudo halt
+        doas halt
         ;;
 esac
  
