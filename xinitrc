@@ -47,6 +47,7 @@ killall -9 xbanish; xbanish &
 killall -9 check_mail; check_mail &
 killall -9 sync_tasks; sync_tasks &
 killall -9 dwmblocks; dwmblocks &
+killall -9 temp; temp &
 
 # Start GPG agent
 GPG_AGENT_SOCK=$(gpgconf --list-dirs agent-socket)
