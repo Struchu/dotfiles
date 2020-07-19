@@ -1,1 +1,0 @@
-../../../src/powerlinex-segment-weechat-remote/hotlist2jsonfile.py
