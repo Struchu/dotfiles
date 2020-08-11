@@ -83,3 +83,7 @@ export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 bindkey '^f' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=14"
 ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
+
+# Autojump
+
+source /usr/share/autojump/autojump.zsh
