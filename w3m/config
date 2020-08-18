@@ -31,7 +31,7 @@ image_scale 100
 imgdisplay w3mimgdisplay
 image_map_list 1
 fold_line 0
-show_lnum 0
+show_lnum 1
 show_srch_str 1
 label_topline 0
 nextpage_topline 0
@@ -58,8 +58,6 @@ vi_prec_num 0
 mark_all_pages 0
 wrap_search 0
 ignorecase_search 1
-use_migemo 1
-migemo_command cmigemo -q -d /usr/share/cmigemo/utf-8/migemo-dict
 use_mouse 0
 reverse_mouse 0
 relative_wheel_scroll 0
@@ -81,14 +79,14 @@ editor sensible-editor
 mailto_options 1
 mailer xdg-open mailto:%s
 extbrowser qutebrowser %s &
-extbrowser2 
+extbrowser2 echo '%s' | xclip -sel primary
 extbrowser3 chromium %s &
 extbrowser4 epiphany %s &
 extbrowser5 konqueror %s &
 extbrowser6 curl -L -O -C - %s &
 extbrowser7 wget -c
 extbrowser8 url=%s && printf %s "$url" | xsel && printf %s "$url" | xsel -b &
-extbrowser9 mpv %s &
+extbrowser9 ts mpv %s
 bgextviewer 1
 use_lessopen 0
 passwd_file ~/.w3m/passwd
@@ -114,7 +112,6 @@ max_news 50
 use_proxy 1
 http_proxy 
 https_proxy 
-gopher_proxy 
 ftp_proxy 
 no_proxy 
 noproxy_netaddr 0
@@ -145,7 +142,7 @@ use_language_tag 1
 ucs_conv 1
 pre_conv 0
 search_conv 1
-fix_width_conv 2
+fix_width_conv 1
 use_gb12345_map 0
 use_jisx0201 0
 use_jisc6226 0
