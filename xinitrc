@@ -34,7 +34,10 @@ if xrandr | grep eDP1 >/dev/null; then
 
     xbacklight -set 10
     xrandr --dpi 120
-    xinput --map-to-output "$TOUCHSCREEN" "eDP1"
+
+    if xinput list | grep "$TOUCHSCREEN"; then
+        xinput --map-to-output "$TOUCHSCREEN" "eDP1"
+    fi
 else
     xrandr --output DP1 --left-of HDMI1
 fi
