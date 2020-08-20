@@ -1,0 +1,10 @@
+#!/bin/sh
+
+export MONITOR_COUNT=$(xrandr | grep ' connected' | wc -l)
+
+[ "$MONITOR_COUNT" = 2 ] && xrandr --output DP1 --left-of eDP1
+
+if [ "$MONITOR_COUNT" = 3 ]; then
+    xrandr --output eDP-1 --right-of DP-2-2
+    xrandr --output DP-2-3 --right-of  eDP-1
+fi

@@ -18,26 +18,16 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 
 # Disable touchpad on ThinkPadX240
 TOUCH_PAD="Synaptics TM2927-001"
-TOUCHSCREEN="ELAN Touchscreen"
 
 if xinput list | grep "$TOUCH_PAD"; then
     xinput set-prop "$TOUCH_PAD" "libinput Tapping Drag Enabled" 0
 fi
 
-export MONITOR_COUNT=$(xrandr | grep ' connected' | wc -l)
-
-# Set the screens
-if [ "$MONITOR_COUNT" = 2 ]; then
-    xrandr --output DP1 --left-of eDP1
-fi
-
-if [ "$MONITOR_COUNT" = 3 ]; then
-    xrandr --output eDP-1 --right-of DP-2-2
-    xrandr --output DP-2-3 --right-of  eDP-1
-fi
+detect_monitors
 
 xrandr --dpi 120
 
+TOUCHSCREEN="ELAN Touchscreen"
 if xinput list | grep "$TOUCHSCREEN"; then
     xinput --map-to-output "$TOUCHSCREEN" "eDP1"
 fi
