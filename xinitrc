@@ -27,20 +27,22 @@ fi
 export MONITOR_COUNT=$(xrandr | grep ' connected' | wc -l)
 
 # Set the screens
-if xrandr | grep eDP1 >/dev/null; then
-    if [ "$MONITOR_COUNT" = 2 ]; then
-        xrandr --output DP1 --left-of eDP1
-    fi
-
-    xbacklight -set 10
-    xrandr --dpi 120
-
-    if xinput list | grep "$TOUCHSCREEN"; then
-        xinput --map-to-output "$TOUCHSCREEN" "eDP1"
-    fi
-else
-    xrandr --output DP1 --left-of HDMI1
+if [ "$MONITOR_COUNT" = 2 ]; then
+    xrandr --output DP1 --left-of eDP1
 fi
+
+if [ "$MONITOR_COUNT" = 3 ]; then
+    xrandr --output eDP-1 --right-of DP-2-2
+    xrandr --output DP-2-3 --right-of  eDP-1
+fi
+
+xrandr --dpi 120
+
+if xinput list | grep "$TOUCHSCREEN"; then
+    xinput --map-to-output "$TOUCHSCREEN" "eDP1"
+fi
+
+which xbacklight && doas xbacklight -set 20
 
 # Set background color
 xsetroot -solid "#eee8d5"
