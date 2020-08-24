@@ -1,6 +1,6 @@
 source ~/.mutt/themerc
 
-set envelope_from = yes
+set use_envelope_from = yes
 set edit_headers = yes
 
 set editor = "vim +/^$"
