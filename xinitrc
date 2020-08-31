@@ -44,6 +44,7 @@ killall -9 sync_tasks; sync_tasks &
 killall -9 dwmblocks; dwmblocks &
 killall -9 temp; temp &
 killall -9 redshift; redshift &
+killall -9 bitlbee; ~/dotfiles/src/bitlbee/bitlbee -F -d ~/.bitlbee
 
 # Start GPG agent
 GPG_AGENT_SOCK=$(gpgconf --list-dirs agent-socket)
