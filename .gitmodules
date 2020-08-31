@@ -35,3 +35,6 @@
 [submodule "src/slock"]
 	path = src/slock
 	url = git@github.com:Struchu/slock.git
+[submodule "src/purple-hangouts"]
+	path = src/purple-hangouts
+	url = git@github.com:EionRobb/purple-hangouts.git
