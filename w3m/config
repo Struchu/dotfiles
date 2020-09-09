@@ -79,7 +79,7 @@ editor sensible-editor
 mailto_options 1
 mailer xdg-open mailto:%s
 extbrowser qutebrowser %s &
-extbrowser2 echo '%s' | xclip -sel primary
+extbrowser2 echo '%s' | xclip -sel clip
 extbrowser3 chromium %s &
 extbrowser4 epiphany %s &
 extbrowser5 konqueror %s &
