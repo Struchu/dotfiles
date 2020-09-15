@@ -43,8 +43,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'keith/swift.vim'
 Plugin 'wikitopian/hardmode'
-Plugin 'posva/vim-vue'
 Plugin 'junegunn/fzf.vim'
+Plugin 'leafOfTree/vim-vue-plugin'
 Plugin 'cohama/lexima.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
@@ -123,6 +123,8 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+let g:javascript_sql_dialect = 'pgsql'
 
 "-----------VIMWIKI--------------------
 let g:vimwiki_list = [{'path': '~/vimwiki/',
