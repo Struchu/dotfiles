@@ -44,7 +44,6 @@ Plugin 'tpope/vim-repeat'
 Plugin 'keith/swift.vim'
 Plugin 'wikitopian/hardmode'
 Plugin 'junegunn/fzf.vim'
-Plugin 'leafOfTree/vim-vue-plugin'
 Plugin 'cohama/lexima.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-sexp'
@@ -179,6 +178,7 @@ nnoremap <leader>d :ToggleDocmode<CR>
 "-----------VUE.JS SUPPORT-------------
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd FileType *.vue syntax sync fromstart
+let g:vue_pre_processors = ['scss']
 
 "-----------CLOJURE--------------------
 let g:iced_enable_default_key_mappings = v:true
