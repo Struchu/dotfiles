@@ -65,4 +65,7 @@ bind pager,index \Cx vfolder-from-query
 bind index - collapse-thread
 bind index _ collapse-all
 
+set collapse_all = yes
+unset collapse_unread
+
 source ~/.mutt/gpg.rc
