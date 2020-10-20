@@ -30,7 +30,6 @@ c.completion.open_categories: ['searchengines', 'history']
 # HTTP configuration
 c.content.headers.accept_language = 'pl_PL,pl'
 c.content.geolocation = False
-c.content.media_capture = False
 c.content.javascript.enabled = False
 
 # Directories etc.
