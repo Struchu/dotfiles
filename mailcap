@@ -1,5 +1,7 @@
 text/html;              w3m %s; nametemplate=%s.html; needsterminal
 text/html;              w3m -dump %s ; nametemplate=%s.html; copiousoutput
+text/calendar;          mutt-ics; copiousoutput
+application/ics;        mutt-ics; copiousoutput 
 
 image/gif;              mpv --loop-file --no-terminal %s &;
 image/*;                nohup feh -F %s &;

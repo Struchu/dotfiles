@@ -68,4 +68,6 @@ bind index _ collapse-all
 set collapse_all = yes
 unset collapse_unread
 
+auto_view text/calendar application/ics
+
 source ~/.mutt/gpg.rc
