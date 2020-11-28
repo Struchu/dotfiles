@@ -28,11 +28,11 @@ color sidebar_flagged color12 default
 
 set confirmappend = no
 
-auto_view text/html
+auto_view text/html text/calendar application/ics
 
 shutdown-hook 'echo `~/dotfiles/bin/mailbox_changed`'
 
-alternative_order text/plain text/enriched text/html
+alternative_order application/ics text/calendar text/html text/enriched text/plain
 
 source ~/.mutt/mailboxes
 
@@ -67,7 +67,5 @@ bind index _ collapse-all
 
 set collapse_all = yes
 unset collapse_unread
-
-auto_view text/calendar application/ics
 
 source ~/.mutt/gpg.rc
