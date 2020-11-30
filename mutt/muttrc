@@ -32,7 +32,7 @@ auto_view text/html text/calendar application/ics
 
 shutdown-hook 'echo `~/dotfiles/bin/mailbox_changed`'
 
-alternative_order application/ics text/calendar text/html text/enriched text/plain
+alternative_order text/html text/enriched text/plain
 
 source ~/.mutt/mailboxes
 
