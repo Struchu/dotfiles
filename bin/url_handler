@@ -15,17 +15,20 @@ case $1 in
     spotify:*|http*://open.spotify.com/*)
         mpc add "$1"
     ;;
-    *.gif*|*.gifv*|*.webm*)
+    *.gif*)
+        curl "$1" -o /tmp/slackimg.gif >/dev/null 2>&1 && sxiv -a /tmp/slackimg.gif >/dev/null 2>&1 &
+    ;;
+    *.jpg*|*.jpeg*|*.png*)
+        curl "$1" -o /tmp/slackimg >/dev/null 2>&1 && sxiv /tmp/slackimg >/dev/null 2>&1 &
+    ;;
+    *.gifv*|*.webm*)
         TS_SOCKET=/tmp/ts.gif ts mpv --loop-file "$1"
     ;;
     *.mp4*)
          TS_SOCKET=/tmp/ts.video ts mpv "$1"
     ;;
-    *.jpg*|*.jpeg*|*.png*)
-        sxiv "$1" >/dev/null 2>&1 &
-    ;;
     *.pdf*)
-        wget "$1" -O - | zathura - >/dev/null 2>&1 &
+        curl "$1" -o - | zathura - >/dev/null 2>&1 &
     ;;
     *)
         qutebrowser "$1" >/dev/null 2>&1 &
