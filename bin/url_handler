@@ -10,7 +10,7 @@ case $1 in
     ;;
     # Slack files are usually not public
     http*://*slack.com/*)
-        nohup qutebrowser "$1" >/dev/null 2>&1 &
+        qutebrowser "$1" >/dev/null 2>&1 &
     ;;
     spotify:*|http*://open.spotify.com/*)
         mpc add "$1"
@@ -22,12 +22,12 @@ case $1 in
          TS_SOCKET=/tmp/ts.video ts mpv "$1"
     ;;
     *.jpg*|*.jpeg*|*.png*)
-        nohup sxiv "$1" >/dev/null 2>&1 &
+        sxiv "$1" >/dev/null 2>&1 &
     ;;
     *.pdf*)
-        wget "$1" -O - | nohup zathura - >/dev/null 2>&1 &
+        wget "$1" -O - | zathura - >/dev/null 2>&1 &
     ;;
     *)
-        nohup qutebrowser "$1" >/dev/null 2>&1 &
+        qutebrowser "$1" >/dev/null 2>&1 &
     ;;
 esac
