@@ -4,5 +4,5 @@ text/calendar;          mutt-ics; copiousoutput
 application/ics;        mutt-ics; copiousoutput
 
 image/gif;              mpv --loop-file --no-terminal %s &;
-image/*;                nohup feh -F %s &;
+image/*;                nohup sxiv %s &;
 application/pdf;        nohup zathura %s &;

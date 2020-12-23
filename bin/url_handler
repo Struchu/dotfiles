@@ -22,7 +22,7 @@ case $1 in
          TS_SOCKET=/tmp/ts.video ts mpv "$1"
     ;;
     *.jpg*|*.jpeg*|*.png*)
-        nohup feh "$1" >/dev/null 2>&1 &
+        nohup sxiv "$1" >/dev/null 2>&1 &
     ;;
     *.pdf*)
         wget "$1" -O - | nohup zathura - >/dev/null 2>&1 &
