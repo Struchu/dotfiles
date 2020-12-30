@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
+DMENU_CMD='dmenu -i -fn Inconsolata:size=13 -nb #fdf6e3 -nf #657b83 -sb #eee8d5 -sf #657b83'
+
+echo $DMENU_CMD
+
 if [[ -z "$1" ]]; then
-  printf "Search query: "; 
-  query=$( echo | dmenu -p "Search YT Video:" )
+  query=$( echo | $DMENU_CMD -p "Search YT Video:" )
 else
 	query="$1"
 fi
 
 query="${query// /+}"
-echo "$query"
 
 # YT_API_KEY location
 YT_API_KEY="$( cat "${HOME}"/.api_keys/YT_API_KEY )"
@@ -16,6 +18,6 @@ urlstring="https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&
 
 mpv "https://$( curl -s "${urlstring}" \
 	| jq -r '.items[] | "\(.snippet.channelTitle) => \(.snippet.title) => youtu.be/\(.id.videoId)"' \
-	| dmenu -i -p 'Select Video -' -l 20 \
+	| $DMENU_CMD -i -p 'Select Video -' -l 20 \
 	| awk '{print $NF}' \
 )"
