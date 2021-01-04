@@ -1,0 +1,5 @@
+endpoint: https://makimo.atlassian.net
+user: marcin.strus@makimo.pl
+password-source: pass
+password-name: JIRA/api-token
+authentication-method: api-token
