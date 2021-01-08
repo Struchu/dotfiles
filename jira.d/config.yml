@@ -3,3 +3,15 @@ user: marcin.strus@makimo.pl
 password-source: pass
 password-name: JIRA/api-token
 authentication-method: api-token
+
+custom-commands:
+  - name: list-sprints
+    help: List all active and upcoming sprints for given project.
+    options:
+      - name: project
+        short: p
+        required: true
+
+    script: |
+      board_id=$({{jira}} req "/rest/agile/1.0/board?projectKeyOrId={{options.project}}" --gjq values.0.id)
+      {{jira}} req "/rest/agile/1.0/board/$board_id/sprint?state=active" | jq -r '.values[] | "\(.id)\t\(.name)\t\(.startDate)\t\(.endDate)"'
