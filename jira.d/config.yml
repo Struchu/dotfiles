@@ -14,7 +14,7 @@ custom-commands:
 
     script: |
       board_id=$({{jira}} req "/rest/agile/1.0/board?projectKeyOrId={{options.project}}" --gjq values.0.id)
-      {{jira}} req "/rest/agile/1.0/board/$board_id/sprint?state=active" | jq -r '.values[] | "\(.id)\t\(.name)\t\(.startDate)\t\(.endDate)"'
+      {{jira}} req "/rest/agile/1.0/board/$board_id/sprint?state=active,future" | jq -r '.values[] | "\(.id)\t\(.name)\t\(.startDate)\t\(.endDate)"'
 
   - name: add-to-sprint
     help: Adds given issues to sprint with specific ID
