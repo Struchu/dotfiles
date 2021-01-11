@@ -29,3 +29,19 @@ custom-commands:
       {{range args.ISSUE}}
       {{jira}} req -M POST "/rest/agile/1.0/sprint/{{args.SPRINT_ID}}/issue" "{\"issues\":[\"{{.}}\"]}"
       {{end}}
+
+  - name: move-to-backlog
+    help: Adds given issues to sprint with specific ID
+    options:
+      - name: project
+        short: p
+        required: true
+    args:
+      - name: ISSUE
+        required: true
+        repeat: true
+    script: |
+      board_id=$({{jira}} req "/rest/agile/1.0/board?projectKeyOrId={{options.project}}" --gjq values.0.id)
+      {{range args.ISSUE}}
+      {{jira}} req -M POST "/rest/agile/1.0/backlog/$board_id/issue" "{\"issues\":[\"{{.}}\"]}"
+      {{end}}
