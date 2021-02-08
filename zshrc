@@ -68,7 +68,7 @@ umask 0022
 
 # Tools
 export EDITOR=vim
-export REVIEW_BASE=develop
+export REVIEW_BASE=master
 
 # Pfetch settings
 export PF_ASCII="void"
