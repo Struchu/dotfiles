@@ -76,9 +76,6 @@ export PF_COL1=4
 export PF_COL2=15
 export PF_COL3=2
 
-# Lynx settings
-export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
-
 # Autosuggestions
 bindkey '^f' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=14"
