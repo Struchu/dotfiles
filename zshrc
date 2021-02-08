@@ -87,7 +87,3 @@ ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 # Autojump
 
 source /usr/share/autojump/autojump.zsh
-
-# Autocomplete for JIRA
-
-eval "$(jira --completion-script-zsh)"
