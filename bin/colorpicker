@@ -1,0 +1,3 @@
+#!/bin/sh
+
+grabc 2>/dev/null | tr -d '\n' | xclip -sel clip
