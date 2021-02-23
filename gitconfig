@@ -1,7 +1,9 @@
 [user]
-	email = marcin.strus@makimo.pl
-	name = Marcin Struś
+        email = marcin.strus@makimo.pl
+        name = Marcin Struś
         signingkey = 0xB41E058860A2C477
+[init]
+        defaultBranch = master
 [gpg]
         program = /usr/bin/gpg2
 [commit]
@@ -11,11 +13,11 @@
 [pull]
         ff = only
 [push]
-	default = simple
+        default = simple
 [alias]
         files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
         stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
         review = !vim -p $(git files) +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
         reviewone = !vim -p +\"tabdo Gdiff $REVIEW_BASE\" +\"let g:gitgutter_diff_base = '$REVIEW_BASE'\"
 [github]
-	user = Struchu
+        user = Struchu
